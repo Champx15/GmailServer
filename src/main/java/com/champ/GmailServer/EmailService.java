@@ -214,10 +214,10 @@ public class EmailService {
         String accessToken = credential.getAccessToken();
 
         // 3️⃣ Create the HTML email using GmailService
-        MimeMessage email = GmailService.createEmailHtml(to, "me", "Verify your UniBazaar account", htmlContent, plainText);
+        MimeMessage email = GmailService.createEmailHtml(to, "me", "Registration Successful", htmlContent, plainText);
 
         // 4️⃣ Send email via Gmail API
-        GmailService.sendEmail(accessToken, to, "me", "Verify your UniBazaar account", htmlContent);
+        GmailService.sendEmail(accessToken, to, "me", "Registration Successful", htmlContent);
 
     }
 }
